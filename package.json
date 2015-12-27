@@ -1,0 +1,18 @@
+{
+  "name": "carolynepress",
+  "version": "1.0.0",
+  "description": "A custom theme for Carolyne Whelan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Acklin",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.10.1",
+    "gulp": "^3.9.0",
+    "gulp-flatten": "^0.2.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-watch": "^4.3.5"
+  }
+}
