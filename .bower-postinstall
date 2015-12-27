@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ -f "bower_components/normalize-css/normalize.css" ]; then
+	mv bower_components/normalize-css/normalize.css bower_components/normalize-css/_normalize.scss
+fi

@@ -1,0 +1,22 @@
+{
+  "name": "carolynepress",
+  "description": "A custom theme for Carolyne Whelan",
+  "main": "index.js",
+  "authors": [
+    "James Acklin"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jamesacklin/carolyne",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}

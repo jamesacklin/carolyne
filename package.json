@@ -9,6 +9,7 @@
   "author": "James Acklin",
   "license": "MIT",
   "devDependencies": {
+    "bower": "^1.7.1",
     "browser-sync": "^2.10.1",
     "gulp": "^3.9.0",
     "gulp-flatten": "^0.2.0",
