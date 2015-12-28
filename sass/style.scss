@@ -35,6 +35,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Minion Pro", $georgia;
 }
 
+p, ul, li {
+  line-height: 1.6;
+}
+
 a.button {
   font-family: "Minion Pro", $georgia;
   font-style: italic;
@@ -71,7 +75,6 @@ a.button {
     }
   }
   .content {
-    line-height: 1.5em;
     @include span-columns(12);
     @include media(48em){
       @include span-columns(10);
@@ -89,6 +92,64 @@ a.button {
     position: absolute;
     top: 0; left: 0;
     height: 100%; width: 100%;
-    opacity: 0.65;
+    opacity: 0.72;
+  }
+}
+
+
+
+
+.section-plugs {
+  background: black;
+  color: white;
+  @include pad(1em 0);
+  a { color: white; }
+  @include media(64em){
+    @include pad(1em 0 0 0);
+  }
+  .section-plug {
+    @include span-columns(12);
+    @include media(48em){
+      @include span-columns(6 of 12);
+    }
+    @include media(64em){
+      @include span-columns(3 of 12);
+    }
+  }
+}
+
+.section-plug {
+  @include pad(1em);
+  position: relative;
+  margin-bottom: 1em;
+  .content {
+    @include span-columns(8 of 12);
+    position: relative;
+    z-index: 1;
+    @include media(48em){
+      @include span-columns(12 of 12);
+    }
+  }
+  h2 {
+    @include pad(0.5em 0.5em 0.25em);
+    line-height: 1;
+    margin: 0;
+    background: #1A1A1A;
+    border-top: 3px solid white;
+  }
+  .image {
+    background: url(images/21061248226_3202fddcaf_k.jpg) 50% 50% black no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    opacity: 0.3;
+    z-index: 0;
+    @include media(48em){
+      position: relative;
+      height: 0;
+      padding-bottom: 66.64%;
+      opacity: 1;
+    }
   }
 }

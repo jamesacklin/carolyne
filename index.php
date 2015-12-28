@@ -22,12 +22,53 @@ get_header(); ?>
 			<div class="content">
 				<p>I'm a freelance writer and poet with a love of travel, outdoor sports, and the human experience, as murky as that may be. In addition to my own blogs, I write for magazines and blogs, and edit content for companies seeking to communicate better with their audiences.</p>
 				<p>
-					<a href="#" class="button">&mdash; Let's Work Together</a>
+					<a href="#" class="button">&mdash;Let's Work Together</a>
 				</p>
 			</div>
 		</div>
 		<div class="image"></div>
 	</div>
+
+
+	<div class="section-plugs">
+		<div class="container">
+			<div class="section-plug">
+				<div class="image"></div>
+				<div class="content">
+					<h2>Section Title</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas perferendis et vel, nihil dignissimos eos, magnam voluptate possimus fugiat praesentium ea.</p>
+					<a href="#" class="button">&mdash;Read More</a>
+				</div>
+			</div>
+			<div class="section-plug">
+				<div class="image"></div>
+				<div class="content">
+					<h2>Section Title</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas perferendis et vel, nihil dignissimos eos, magnam voluptate possimus fugiat praesentium ea.</p>
+					<a href="#" class="button">&mdash;Read More</a>
+				</div>
+			</div>
+			<div class="section-plug">
+				<div class="image"></div>
+				<div class="content">
+					<h2>Section Title</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas perferendis et vel, nihil dignissimos eos, magnam voluptate possimus fugiat praesentium ea.</p>
+					<a href="#" class="button">&mdash;Read More</a>
+				</div>
+			</div>
+			<div class="section-plug">
+				<div class="image"></div>
+				<div class="content">
+					<h2>Section Title</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas perferendis et vel, nihil dignissimos eos, magnam voluptate possimus fugiat praesentium ea.</p>
+					<a href="#" class="button">&mdash;Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
 
 
 	<div id="primary" class="content-area">

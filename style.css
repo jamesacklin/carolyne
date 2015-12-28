@@ -384,6 +384,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Minion Pro", "Georgia", "Cambria", "Times New Roman", "Times", serif; }
 
+p, ul, li {
+  line-height: 1.6; }
+
 a.button {
   font-family: "Minion Pro", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-style: italic;
@@ -426,7 +429,6 @@ a.button {
         .home-hero .headline h1 {
           font-size: 4em; } }
   .home-hero .content {
-    line-height: 1.5em;
     float: left;
     display: block;
     margin-right: 0%;
@@ -460,4 +462,81 @@ a.button {
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: 0.65; }
+    opacity: 0.72; }
+
+.section-plugs {
+  background: black;
+  color: white;
+  padding: 1em 0; }
+  .section-plugs a {
+    color: white; }
+  @media screen and (min-width: 64em) {
+    .section-plugs {
+      padding: 1em 0 0 0; } }
+  .section-plugs .section-plug {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%; }
+    .section-plugs .section-plug:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 48em) {
+      .section-plugs .section-plug {
+        float: left;
+        display: block;
+        margin-right: 0%;
+        width: 50%; }
+        .section-plugs .section-plug:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 64em) {
+      .section-plugs .section-plug {
+        float: left;
+        display: block;
+        margin-right: 0%;
+        width: 25%; }
+        .section-plugs .section-plug:last-child {
+          margin-right: 0; } }
+
+.section-plug {
+  padding: 1em;
+  position: relative;
+  margin-bottom: 1em; }
+  .section-plug .content {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 66.66667%;
+    position: relative;
+    z-index: 1; }
+    .section-plug .content:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 48em) {
+      .section-plug .content {
+        float: left;
+        display: block;
+        margin-right: 0%;
+        width: 100%; }
+        .section-plug .content:last-child {
+          margin-right: 0; } }
+  .section-plug h2 {
+    padding: 0.5em 0.5em 0.25em;
+    line-height: 1;
+    margin: 0;
+    background: #1A1A1A;
+    border-top: 3px solid white; }
+  .section-plug .image {
+    background: url(images/21061248226_3202fddcaf_k.jpg) 50% 50% black no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    z-index: 0; }
+    @media screen and (min-width: 48em) {
+      .section-plug .image {
+        position: relative;
+        height: 0;
+        padding-bottom: 66.64%;
+        opacity: 1; } }
