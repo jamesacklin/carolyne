@@ -15,4 +15,80 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 */
 
+
+$gutter: 0em;
+$max-width: 1600px;
+
 @import "../bower_components/normalize-css/normalize";
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/neat/app/assets/stylesheets/neat";
+@import "../bower_components/neat/app/assets/stylesheets/neat-helpers";
+
+* { text-rendering: optimizeLegibility; }
+
+body {
+  font-family: "Facit", $lucida-grande;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Minion Pro", $georgia;
+}
+
+a.button {
+  font-family: "Minion Pro", $georgia;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.container {
+  @include outer-container();
+  @include pad(0 5%);
+}
+
+
+.home-hero {
+  color: white;
+  position: relative;
+  background: black;
+  a { color: white; }
+  @include pad(0 0 2em 0);
+  @include media(48em){
+    height: 50vw;
+    @include pad(3vw 0 3vw 0);
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  .headline {
+    @include span-columns(12);
+    h1 {
+      font-size: 3em;
+      @include media(48em){
+        font-size: 4em;
+      }
+    }
+  }
+  .content {
+    line-height: 1.5em;
+    @include span-columns(12);
+    @include media(48em){
+      @include span-columns(10);
+      @include shift(1);
+    }
+    @include media(64em){
+      font-size: 1.125em;
+      @include span-columns(6);
+      @include shift(2);
+    }
+  }
+  .image {
+    background: url(images/21061248226_3202fddcaf_k.jpg) 50% 50% black no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    opacity: 0.65;
+  }
+}

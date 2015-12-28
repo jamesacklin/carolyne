@@ -368,3 +368,96 @@ table {
 td,
 th {
   padding: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+* {
+  text-rendering: optimizeLegibility; }
+
+body {
+  font-family: "Facit", "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Minion Pro", "Georgia", "Cambria", "Times New Roman", "Times", serif; }
+
+a.button {
+  font-family: "Minion Pro", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  font-style: italic;
+  text-decoration: none; }
+
+.container {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 5%; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.home-hero {
+  color: white;
+  position: relative;
+  background: black;
+  padding: 0 0 2em 0; }
+  .home-hero a {
+    color: white; }
+  @media screen and (min-width: 48em) {
+    .home-hero {
+      height: 50vw;
+      padding: 3vw 0 3vw 0; } }
+  .home-hero .container {
+    position: relative;
+    z-index: 1; }
+  .home-hero .headline {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%; }
+    .home-hero .headline:last-child {
+      margin-right: 0; }
+    .home-hero .headline h1 {
+      font-size: 3em; }
+      @media screen and (min-width: 48em) {
+        .home-hero .headline h1 {
+          font-size: 4em; } }
+  .home-hero .content {
+    line-height: 1.5em;
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%; }
+    .home-hero .content:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 48em) {
+      .home-hero .content {
+        float: left;
+        display: block;
+        margin-right: 0%;
+        width: 83.33333%;
+        margin-left: 8.33333%; }
+        .home-hero .content:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 64em) {
+      .home-hero .content {
+        font-size: 1.125em;
+        float: left;
+        display: block;
+        margin-right: 0%;
+        width: 50%;
+        margin-left: 16.66667%; }
+        .home-hero .content:last-child {
+          margin-right: 0; } }
+  .home-hero .image {
+    background: url(images/21061248226_3202fddcaf_k.jpg) 50% 50% black no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.65; }

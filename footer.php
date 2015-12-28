@@ -12,7 +12,7 @@
 ?>
 
 	</div><!-- #content -->
-
+<?php /*
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'carolynepress' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'carolynepress' ), 'WordPress' ); ?></a>
@@ -20,6 +20,7 @@
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'carolynepress' ), 'carolynepress', '<a href="http://www.jamesacklin.com/" rel="designer">James Acklin</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+	*/ ?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

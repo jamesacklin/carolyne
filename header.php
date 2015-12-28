@@ -22,6 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+	<?php /*
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'carolynepress' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
@@ -36,7 +37,7 @@
 
 			$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<p class="site-description"><?php echo $description; ?></p>
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
@@ -46,5 +47,6 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+	*/ ?>
 
 	<div id="content" class="site-content">
