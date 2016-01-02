@@ -27,7 +27,6 @@ $normal: darken(#420943, 5%);
 
 body {
   font-family: "Proxima Nova";
-
 }
 
 img {
@@ -184,6 +183,36 @@ a.button {
   h2 {
     font-weight: 800;
     font-size: 3em;
+  }
+  &.archive-header {
+    background: $dark-1;
+    position: relative;
+    max-width: none;
+    padding: 4em 0;
+    @include media(48em){
+      height: 60vw;
+      padding: 3vw 0 3vw 0;
+      @include display(flex);
+      @include align-items(center);
+    }
+    @include media(75em){
+      height: 50vw;
+    }
+    .image {
+      background-position: 50% 50%;
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%; width: 100%;
+      background-size: cover;
+      opacity: 0.66;
+    }
+    h2 {
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
   }
 }
 

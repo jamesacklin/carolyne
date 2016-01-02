@@ -15,7 +15,7 @@
 			if (has_post_thumbnail()){
 				the_post_thumbnail();
 			} else {
-				echo "<img src='http://localhost:3000/wp-content/uploads/2015/12/text.png'>";
+				// See functions.php for the 'category-featured-images' plugin :)
 			}
 		?>
 	</div>
@@ -29,7 +29,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			Posted on Date at Time in <strong>Category</strong>
+			Posted on <?php the_time('F j, Y'); ?> at <?php the_time('g:i A'); ?> in <strong><?php the_category(' '); ?></strong>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -37,7 +37,7 @@
 
 	<div class="entry-content">
 		<?php
-		if (is_front_page()):
+		if (is_front_page() || is_archive() ):
 			the_excerpt();
 		elseif ( !is_front_page() ) :
 			the_content( sprintf(

@@ -76,6 +76,15 @@ function carolynepress_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	/* Customize archive titles. */
+	add_filter( 'get_the_archive_title', function ($title) {
+    if ( is_category() ) {
+      $title = single_cat_title( '', false );
+    }
+    return $title;
+	});
+
 }
 endif;
 add_action( 'after_setup_theme', 'carolynepress_setup' );
@@ -150,3 +159,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Category featured images.
+ */
+require get_template_directory() . '/inc/category-featured-images.php';
