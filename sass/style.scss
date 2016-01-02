@@ -15,9 +15,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 */
 
-
-$gutter: 0em;
-$max-width: 1600px;
+$dark-1: darken(#420943, 11.5%);
+$normal: darken(#420943, 5%);
 
 @import "../bower_components/normalize-css/normalize";
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
@@ -27,12 +26,21 @@ $max-width: 1600px;
 * { text-rendering: optimizeLegibility; }
 
 body {
-  font-family: "Facit", $lucida-grande;
+  font-family: "Proxima Nova";
 
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Minion Pro", $georgia;
+  a {
+    text-decoration: none;
+    color: $dark-1;
+    &:hover { color: $normal; }
+  }
 }
 
 p, ul, li {
@@ -40,59 +48,69 @@ p, ul, li {
 }
 
 a.button {
-  font-family: "Minion Pro", $georgia;
-  font-style: italic;
+  // font-family: "Minion Pro", $georgia;
+  // font-style: italic;
   text-decoration: none;
 }
 
 .container {
-  @include outer-container();
-  @include pad(0 5%);
+  width: 90%;
+  margin: 0 auto;
+  min-width: 255px;
+  max-width: none;
 }
 
 
 .home-hero {
   color: white;
   position: relative;
-  background: black;
+  background: $dark-1;
+  padding: 0 0 2em 0;
   a { color: white; }
-  @include pad(0 0 2em 0);
   @include media(48em){
+    height: 60vw;
+    padding: 3vw 0 3vw 0;
+  }
+  @include media(75em){
     height: 50vw;
-    @include pad(3vw 0 3vw 0);
   }
   .container {
     position: relative;
     z-index: 1;
   }
   .headline {
-    @include span-columns(12);
+    width: 100%;
     h1 {
       font-size: 3em;
+      margin-top: 0;
+      padding-top: 0.67em;
+      font-weight: 800;
       @include media(48em){
         font-size: 4em;
       }
     }
   }
   .content {
-    @include span-columns(12);
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
     @include media(48em){
-      @include span-columns(10);
-      @include shift(1);
+      font-size: 1.125em;
+      width: 80%;
+      margin-left: 5%;
     }
     @include media(64em){
-      font-size: 1.125em;
-      @include span-columns(6);
-      @include shift(2);
+      font-size: 1.25em;
+      width: 50%;
+      margin-left: 11%;
     }
   }
   .image {
-    background: url(images/21061248226_3202fddcaf_k.jpg) 50% 50% black no-repeat;
+    background: url(https://images.unsplash.com/photo-1451535969736-7e252829b2c7?crop=entropy&fit=crop&fm=jpg&h=1150&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1700) 50% 50% $dark-1 no-repeat;
     background-size: cover;
     position: absolute;
     top: 0; left: 0;
     height: 100%; width: 100%;
-    opacity: 0.72;
+    opacity: 0.5;
+    overflow: hidden;
   }
 }
 
@@ -100,45 +118,49 @@ a.button {
 
 
 .section-plugs {
-  background: black;
-  color: white;
-  @include pad(1em 0);
-  a { color: white; }
+  @include clearfix;
+  background: $dark-1;
+  padding: 1em 0;
   @include media(64em){
-    @include pad(1em 0 0 0);
+    padding: 2em 0;
   }
   .section-plug {
-    @include span-columns(12);
     @include media(48em){
-      @include span-columns(6 of 12);
+      padding: 1em;
+      float: left;
+      width: 50%;
     }
     @include media(64em){
-      @include span-columns(3 of 12);
+      width: 25%;
     }
   }
 }
 
 .section-plug {
-  @include pad(1em);
+  padding: 1em;
+  background: $dark-1;
+  color: white;
   position: relative;
   margin-bottom: 1em;
+  a { color: white; }
   .content {
-    @include span-columns(8 of 12);
+    width: 66%;
     position: relative;
     z-index: 1;
     @include media(48em){
-      @include span-columns(12 of 12);
+      width: 100%;
     }
   }
   h2 {
-    @include pad(0.5em 0.5em 0.25em);
+    padding: 0.5em;
     line-height: 1;
     margin: 0;
-    background: #1A1A1A;
+    background: $normal;
     border-top: 3px solid white;
+    font-weight: 800;
   }
   .image {
-    background: url(images/21061248226_3202fddcaf_k.jpg) 50% 50% black no-repeat;
+    background: url(https://images.unsplash.com/photo-1451535969736-7e252829b2c7?crop=entropy&fit=crop&fm=jpg&h=1150&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1700) 50% 50% $dark-1 no-repeat;
     background-size: cover;
     position: absolute;
     top: 0; left: 0;
@@ -150,6 +172,75 @@ a.button {
       height: 0;
       padding-bottom: 66.64%;
       opacity: 1;
+    }
+  }
+}
+
+.posts-header {
+  margin: 0 auto;
+  max-width: 1024px;
+  @include media(48em){ padding: 2em 0; }
+  @include media(64em){ padding: 3em 0; }
+  h2 {
+    font-weight: 800;
+    font-size: 3em;
+  }
+}
+
+.posts-list {
+  margin: 0 auto;
+  max-width: 1024px;
+  article {
+    @include clearfix;
+    margin-bottom: 3em;
+    padding-top: 1.5em;
+    border-top: 1px solid #DDDDDD;
+    .entry-image {
+      img { width: 100%; }
+      @include media(48em){
+        float: left;
+        width: 50%;
+        padding-right: 1.25em;
+      }
+      @include media(64em){
+        float: left;
+        width: 50%;
+        padding-right: 1.25em;
+      }
+    }
+    .entry-header {
+      h2 {
+        font-size: 1.5em;
+        font-weight: 800;
+      }
+      @include media(48em){
+        float: right;
+        width: 50%;
+        h2 { margin-top: 0; }
+      }
+      @include media(64em){
+        float: left;
+        width: 25%;
+        padding-right: 1.25em;
+      }
+    }
+    .entry-content {
+      @include media(48em){
+        width: 50%;
+        float: right;
+      }
+      @include media(64em){
+        float: left;
+        width: 25%;
+        font-size: 0.9em;
+        p { margin-top: 0; }
+      }
+    }
+    .entry-meta {
+      font-size: 0.8em;
+    }
+    .entry-footer {
+      display: none;
     }
   }
 }

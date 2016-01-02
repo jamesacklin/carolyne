@@ -10,6 +10,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="entry-image">
+		<?php
+			if (has_post_thumbnail()){
+				the_post_thumbnail();
+			} else {
+				echo "<img src='http://localhost:3000/wp-content/uploads/2015/12/text.png'>";
+			}
+		?>
+	</div>
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
@@ -20,7 +29,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php carolynepress_posted_on(); ?>
+			Posted on Date at Time in <strong>Category</strong>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -28,6 +37,9 @@
 
 	<div class="entry-content">
 		<?php
+		if (is_front_page()):
+			the_excerpt();
+		elseif ( !is_front_page() ) :
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'carolynepress' ), array( 'span' => array( 'class' => array() ) ) ),
@@ -38,6 +50,7 @@
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'carolynepress' ),
 				'after'  => '</div>',
 			) );
+		endif;
 		?>
 	</div><!-- .entry-content -->
 
