@@ -29,47 +29,7 @@ get_header(); ?>
 		<div class="image"></div>
 	</div>
 
-
-	<div class="section-plugs">
-		<div class="container">
-			<div class="section-plug">
-				<div class="image"></div>
-				<div class="content">
-					<h2>Section Title</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas perferendis et vel, nihil dignissimos eos, magnam voluptate possimus fugiat praesentium ea.</p>
-					<a href="#" class="button">&mdash;Read More</a>
-				</div>
-			</div>
-			<div class="section-plug">
-				<div class="image"></div>
-				<div class="content">
-					<h2>Section Title</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas perferendis et vel, nihil dignissimos eos, magnam voluptate possimus fugiat praesentium ea.</p>
-					<a href="#" class="button">&mdash;Read More</a>
-				</div>
-			</div>
-			<div class="section-plug">
-				<div class="image"></div>
-				<div class="content">
-					<h2>Section Title</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas perferendis et vel, nihil dignissimos eos, magnam voluptate possimus fugiat praesentium ea.</p>
-					<a href="#" class="button">&mdash;Read More</a>
-				</div>
-			</div>
-			<div class="section-plug">
-				<div class="image"></div>
-				<div class="content">
-					<h2>Section Title</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas perferendis et vel, nihil dignissimos eos, magnam voluptate possimus fugiat praesentium ea.</p>
-					<a href="#" class="button">&mdash;Read More</a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-
+	<?php get_template_part( 'template-parts/section-plugs'); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
