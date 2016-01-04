@@ -194,6 +194,8 @@ a.button {
       padding: 3vw 0 3vw 0;
       @include display(flex);
       @include align-items(center);
+      @include justify-content(center);
+      @include flex-direction(column);
     }
     @include media(75em){
       height: 50vw;
@@ -206,12 +208,16 @@ a.button {
       background-size: cover;
       opacity: 0.66;
     }
-    h2 {
+    h2, .taxonomy-description {
       margin: 0 auto;
       text-align: center;
       position: relative;
       z-index: 1;
       color: white;
+    }
+    .taxonomy-description {
+      font-size: 1.2em;
+      max-width: 800px;
     }
   }
 }
@@ -270,6 +276,54 @@ a.button {
     }
     .entry-footer {
       display: none;
+    }
+  }
+}
+
+.skip-link { display: none; }
+
+.site-header {
+  background: $normal;
+  a, a:visited {
+    color: white;
+    text-decoration: none;
+    &:hover { text-decoration: underline }
+  }
+}
+.site-branding,
+.site-title {
+  display: inline-block;
+}
+
+.site-title {
+  font-weight: 800;
+  font-size: 1.5em;
+  margin: 0 1em 0 0;
+  border-top: 3px solid white;
+  padding: 0.5em;
+}
+
+.main-navigation {
+  @include media(48em){ display: inline-block; }
+  .menu-toggle { display: none; }
+  .nav-menu {
+    @media (max-width: 48em){ display: none; }
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      padding: 0.5em 0;
+      @include media(48em){
+        display: inline-block;
+        padding: 1em;
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+    li.page_item_has_children {
+      ul.children { display: none; }
     }
   }
 }
