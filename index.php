@@ -14,21 +14,6 @@
 
 get_header(); ?>
 
-	<div class="home-hero">
-		<div class="container">
-			<div class="headline">
-				<h1>Carolyne Whelan</h1>
-			</div>
-			<div class="content">
-				<p>I'm a freelance writer and poet with a love of travel, outdoor sports, and the human experience, as murky as that may be. In addition to my own blogs, I write for magazines and blogs, and edit content for companies seeking to communicate better with their audiences.</p>
-				<p>
-					<a href="#" class="button">&mdash;Let's Work Together</a>
-				</p>
-			</div>
-		</div>
-		<div class="image"></div>
-	</div>
-
 	<?php get_template_part( 'template-parts/section-plugs'); ?>
 
 	<div id="primary" class="content-area">
