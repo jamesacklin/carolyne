@@ -398,13 +398,20 @@ h1, h2, h3, h4, h5, h6 {
 p, ul, li {
   line-height: 1.6; }
 
+a {
+  color: #2c062d; }
+  a:hover {
+    color: #580c59; }
+
 a.button {
   text-decoration: none;
   display: inline-block;
   background: rgba(0, 0, 0, 0.5);
   line-height: 1;
   padding: 0.5em;
-  border-radius: 0.25em; }
+  border-radius: 0.25em;
+  font-style: italic;
+  border: none; }
   a.button:hover {
     background: rgba(0, 0, 0, 0.75); }
 
@@ -626,6 +633,8 @@ a.button {
     .posts-list article .entry-header h2 {
       font-size: 1.75em;
       font-weight: 700; }
+      .posts-list article .entry-header h2 a {
+        border: none; }
     @media screen and (min-width: 48em) {
       .posts-list article .entry-header {
         float: right;
@@ -675,7 +684,13 @@ article .entry-content {
       article .entry-content p {
         font-size: 1.25em;
         line-height: 1.6;
-        letter-spacing: -0.01rem; } }
+        letter-spacing: -0.01rem; }
+        article .entry-content p a {
+          text-decoration: none;
+          box-shadow: 0 -0.5em 0 #fef6fe inset;
+          border-bottom: 1px solid #2c062d; }
+          article .entry-content p a:hover {
+            box-shadow: 0 -0.5em #d3f9d2 inset; } }
 
 article .entry-footer {
   margin: 2em auto 0;
