@@ -267,8 +267,10 @@ a.button {
       @include media(64em){
         float: left;
         width: 25%;
-        font-size: 0.9em;
-        p { margin-top: 0; }
+        p {
+          margin-top: 0;
+          font-size: 0.9em;
+        }
       }
     }
     .entry-meta {
