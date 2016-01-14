@@ -375,27 +375,38 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-* {
-  text-rendering: optimizeLegibility; }
-
 body {
-  font-family: "Proxima Nova"; }
+  font-family: "freight-text-pro", "Minion Pro", "Georgia", serif;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures;
+  -moz-font-feature-settings: "liga", "clig";
+  -webkit-font-feature-settings: "liga", "clig";
+  font-feature-settings: "liga", "clig"; }
 
 img {
   max-width: 100%;
   height: auto; }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  text-decoration: none;
-  color: #0f020f; }
-  h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-    color: #2c062d; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: "ratio-display", sans-serif; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    text-decoration: none;
+    color: #0f020f; }
+    h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+      color: #2c062d; }
 
 p, ul, li {
   line-height: 1.6; }
 
 a.button {
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 1;
+  padding: 0.5em;
+  border-radius: 0.25em; }
+  a.button:hover {
+    background: rgba(0, 0, 0, 0.75); }
 
 .container {
   width: 90%;
@@ -426,7 +437,7 @@ a.button {
       font-size: 3em;
       margin-top: 0;
       padding-top: 0.67em;
-      font-weight: 800; }
+      font-weight: 700; }
       @media screen and (min-width: 48em) {
         .home-hero .headline h1 {
           font-size: 4em; } }
@@ -493,7 +504,7 @@ a.button {
     margin: 0;
     background: #2c062d;
     border-top: 3px solid white;
-    font-weight: 800; }
+    font-weight: 700; }
   .section-plug .image {
     background: url(https://images.unsplash.com/photo-1451535969736-7e252829b2c7?crop=entropy&fit=crop&fm=jpg&h=1150&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1700) 50% 50% #0f020f no-repeat;
     background-size: cover;
@@ -521,7 +532,7 @@ a.button {
     .posts-header {
       padding: 3em 0; } }
   .posts-header h2 {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 3em; }
   .posts-header.archive-header {
     background: #0f020f;
@@ -613,8 +624,8 @@ a.button {
         width: 50%;
         padding-right: 1.25em; } }
     .posts-list article .entry-header h2 {
-      font-size: 1.5em;
-      font-weight: 800; }
+      font-size: 1.75em;
+      font-weight: 700; }
     @media screen and (min-width: 48em) {
       .posts-list article .entry-header {
         float: right;
@@ -653,7 +664,7 @@ article .entry-image img {
 article .entry-header .entry-title {
   font-size: 36px;
   line-height: 1.15;
-  font-weight: 800; }
+  font-weight: 700; }
 
 article .entry-content {
   margin: 2em auto 0; }
@@ -696,11 +707,12 @@ article .entry-footer {
   display: inline-block; }
 
 .site-title {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1.5em;
   margin: 0 1em 0 0;
   border-top: 3px solid white;
-  padding: 0.5em; }
+  padding: 0.5em;
+  font-family: "ratio-display", sans-serif; }
 
 @media screen and (min-width: 48em) {
   .main-navigation {
