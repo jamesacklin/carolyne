@@ -642,6 +642,44 @@ a.button {
     .posts-list article .entry-footer {
       display: none; }
 
+article .entry-image img {
+  width: 100%; }
+
+@media screen and (min-width: 48em) {
+  article .entry-header {
+    max-width: 700px;
+    margin: 3em auto 0; } }
+
+article .entry-header .entry-title {
+  font-size: 36px;
+  line-height: 1.15;
+  font-weight: 800; }
+
+article .entry-content {
+  margin: 2em auto 0; }
+  @media screen and (min-width: 48em) {
+    article .entry-content {
+      max-width: 700px;
+      margin: 3em auto 0; }
+      article .entry-content p {
+        font-size: 1.25em;
+        line-height: 1.6;
+        letter-spacing: -0.01rem; } }
+
+article .entry-footer {
+  margin: 2em auto 0;
+  padding-top: 2em;
+  border-top: 1px solid #DDD; }
+  @media screen and (min-width: 48em) {
+    article .entry-footer {
+      max-width: 700px; } }
+
+.comments-area {
+  margin: 2em auto 0; }
+  @media screen and (min-width: 48em) {
+    .comments-area {
+      max-width: 700px; } }
+
 .skip-link {
   display: none; }
 

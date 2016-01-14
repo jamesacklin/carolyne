@@ -19,6 +19,7 @@
 			}
 		?>
 	</div>
+	<?php if (is_single()) echo "<div class='container'>"; ?>
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
@@ -57,4 +58,5 @@
 	<footer class="entry-footer">
 		<?php carolynepress_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+	<?php if (is_single()) echo "</div>"; ?>
 </article><!-- #post-## -->

@@ -280,6 +280,50 @@ a.button {
   }
 }
 
+article {
+  .entry-image {
+    img { width: 100%; }
+  }
+  .entry-header {
+    @include media(48em){
+      max-width: 700px;
+      margin: 3em auto 0;
+    }
+    .entry-title {
+      font-size: 36px;
+      line-height: 1.15;
+      font-weight: 800;
+    }
+  }
+  .entry-content {
+    margin: 2em auto 0;
+    @include media(48em){
+      max-width: 700px;
+      margin: 3em auto 0;
+      p {
+        font-size: 1.25em;
+        line-height: 1.6;
+        letter-spacing: -0.01rem;
+      }
+    }
+  }
+  .entry-footer {
+    margin: 2em auto 0;
+    padding-top: 2em;
+    border-top: 1px solid #DDD;
+    @include media(48em){
+      max-width: 700px;
+    }
+  }
+}
+
+.comments-area {
+  margin: 2em auto 0;
+  @include media(48em){
+    max-width: 700px;
+  }
+}
+
 .skip-link { display: none; }
 
 .site-header {
