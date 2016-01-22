@@ -85,6 +85,22 @@ function carolynepress_setup() {
     return $title;
 	});
 
+	// add_filter( 'wp_trim_excerpt', 'get_first_paragraph', 10, 2 );
+
+	/* Custom excerpts! */
+	function get_first_paragraph($id){
+		$content_post = get_post($id);
+		$content = $content_post->post_content;
+		$content = apply_filters('the_content', $content);
+		$str = str_replace(']]>', ']]&gt;', $content);
+		$str = wpautop($str);
+		$str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
+		// Strips all tags out except links, strong, and emphasis. It will remove header tags but leave the content. Beware!
+		$str = strip_tags($str, '<a><strong><em>');
+		return '<p>' . $str . '</p>';
+	}
+
+
 }
 endif;
 add_action( 'after_setup_theme', 'carolynepress_setup' );
