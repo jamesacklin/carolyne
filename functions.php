@@ -47,6 +47,12 @@ function carolynepress_setup() {
 		'primary' => esc_html__( 'Primary', 'carolynepress' ),
 	) );
 
+	/* Add theme options page(s) */
+	if( function_exists('acf_add_options_page') ) {
+		acf_add_options_page('Theme Settings');
+	//	acf_add_options_page('More Theme Settings');
+	}
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -99,7 +105,6 @@ function carolynepress_setup() {
 		$str = strip_tags($str, '<a><strong><em>');
 		return '<p>' . $str . '</p>';
 	}
-
 
 }
 endif;
