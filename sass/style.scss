@@ -102,6 +102,7 @@ a.button {
   }
   @include media(75em){
     height: 50vw;
+    max-height: 900px;
   }
   .container {
     position: relative;

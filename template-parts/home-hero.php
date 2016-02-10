@@ -28,5 +28,10 @@
       <?php endif; ?>
     </div>
   </div>
-  <div class="image"></div>
+  <?php if (get_field('homepage_image', 'option')): ?>
+    <div class="image" style="background-image: url(<?php echo get_field('homepage_image', 'option') ?>);"></div>
+  <?php else: ?>
+    <div class="image"></div>
+  <?php endif; ?>
+
 </div>

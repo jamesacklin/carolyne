@@ -439,7 +439,8 @@ a.button {
       padding: 3vw 0 3vw 0; } }
   @media screen and (min-width: 75em) {
     .home-hero {
-      height: 50vw; } }
+      height: 50vw;
+      max-height: 900px; } }
   .home-hero .container {
     position: relative;
     z-index: 1; }
