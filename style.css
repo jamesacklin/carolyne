@@ -422,12 +422,12 @@ a.button {
   max-width: none; }
 
 .home-hero {
-  color: white;
+  color: #fafafa;
   position: relative;
   background: #0f020f;
   padding: 0 0 2em 0; }
   .home-hero a {
-    color: white; }
+    color: #fafafa; }
   @media screen and (min-width: 48em) {
     .home-hero {
       height: 60vw;
@@ -493,11 +493,13 @@ a.button {
 .section-plug {
   padding: 1em;
   background: #0f020f;
-  color: white;
+  color: #fafafa;
   position: relative;
   margin-bottom: 1em; }
   .section-plug a {
-    color: white; }
+    color: #fafafa; }
+    .section-plug a:hover {
+      color: #fafafa; }
   .section-plug .content {
     width: 66%;
     position: relative;
@@ -510,7 +512,7 @@ a.button {
     line-height: 1;
     margin: 0;
     background: #2c062d;
-    border-top: 3px solid white;
+    border-top: 3px solid #fafafa;
     font-weight: 700; }
   .section-plug .image {
     background: url(url() 50% 50% #0f020f no-repeat;
@@ -602,7 +604,7 @@ a.button {
       text-align: center;
       position: relative;
       z-index: 1;
-      color: white; }
+      color: #fafafa; }
     .posts-header.archive-header .taxonomy-description {
       font-size: 1.2em;
       max-width: 800px; }
@@ -712,7 +714,7 @@ article .entry-footer {
 .site-header {
   background: #2c062d; }
   .site-header a, .site-header a:visited {
-    color: white;
+    color: #fafafa;
     text-decoration: none; }
     .site-header a:hover, .site-header a:visited:hover {
       text-decoration: underline; }
@@ -725,7 +727,7 @@ article .entry-footer {
   font-weight: 700;
   font-size: 1.5em;
   margin: 0 1em 0 0;
-  border-top: 3px solid white;
+  border-top: 3px solid #fafafa;
   padding: 0.5em;
   font-family: "ratio-display", sans-serif; }
 

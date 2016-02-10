@@ -17,6 +17,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 $dark-1: darken(#420943, 11.5%);
 $normal: darken(#420943, 5%);
+$white: #fafafa;
 
 @import "../bower_components/normalize-css/normalize";
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
@@ -80,11 +81,11 @@ a.button {
 
 
 .home-hero {
-  color: white;
+  color: $white;
   position: relative;
   background: $dark-1;
   padding: 0 0 2em 0;
-  a { color: white; }
+  a { color: $white; }
   @include media(48em){
     height: 60vw;
     padding: 3vw 0 3vw 0;
@@ -157,10 +158,13 @@ a.button {
 .section-plug {
   padding: 1em;
   background: $dark-1;
-  color: white;
+  color: $white;
   position: relative;
   margin-bottom: 1em;
-  a { color: white; }
+  a {
+    color: $white;
+    &:hover { color: $white; }
+  }
   .content {
     width: 66%;
     position: relative;
@@ -174,7 +178,7 @@ a.button {
     line-height: 1;
     margin: 0;
     background: $normal;
-    border-top: 3px solid white;
+    border-top: 3px solid $white;
     font-weight: 700;
   }
   .image {
@@ -232,7 +236,7 @@ a.button {
       text-align: center;
       position: relative;
       z-index: 1;
-      color: white;
+      color: $white;
     }
     .taxonomy-description {
       font-size: 1.2em;
@@ -357,7 +361,7 @@ article {
 .site-header {
   background: $normal;
   a, a:visited {
-    color: white;
+    color: $white;
     text-decoration: none;
     &:hover { text-decoration: underline }
   }
@@ -371,7 +375,7 @@ article {
   font-weight: 700;
   font-size: 1.5em;
   margin: 0 1em 0 0;
-  border-top: 3px solid white;
+  border-top: 3px solid $white;
   padding: 0.5em;
   font-family: "ratio-display", sans-serif;
 }
