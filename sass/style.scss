@@ -134,12 +134,12 @@ a.button {
     }
   }
   .image {
-    background: url(https://images.unsplash.com/photo-1451535969736-7e252829b2c7?crop=entropy&fit=crop&fm=jpg&h=1150&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1700) 50% 50% $dark-1 no-repeat;
     background-size: cover;
+    background-position: 50% 50%;
     position: absolute;
     top: 0; left: 0;
     height: 100%; width: 100%;
-    opacity: 0.5;
+    opacity: 0.75;
     overflow: hidden;
   }
   .support {
@@ -344,7 +344,7 @@ article {
     @include media(48em){
       max-width: 700px;
       margin: 3em auto 0;
-      p {
+      p, li {
         font-size: 1.25em;
         line-height: 1.6;
         letter-spacing: -0.01rem;
@@ -355,6 +355,7 @@ article {
           &:hover { box-shadow: 0 -0.5em invert($normal) inset; }
         }
       }
+      li { margin-bottom: 1em; }
     }
   }
   .entry-footer {
@@ -429,6 +430,7 @@ figure{
   width: 100%;
   position: relative;
   height: 0;
+  background: $dark-1;
   // padding: 56.25% 0 0 0;
   padding: 50% 0 0 0;
   overflow: hidden;
@@ -443,4 +445,16 @@ figure img{
   top: 0;
   bottom: 0;
   margin: auto;
+}
+
+.site-footer {
+  margin-top: 3em;
+  background: $normal;
+  color: $white;
+  a, a:visited {
+    color: $white;
+    text-decoration: none;
+    &:hover { text-decoration: underline }
+  }
+  p { margin: 0; padding: 1em 0; }
 }

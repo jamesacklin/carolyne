@@ -467,14 +467,14 @@ a.button {
         width: 50%;
         margin-left: 11%; } }
   .home-hero .image {
-    background: url(https://images.unsplash.com/photo-1451535969736-7e252829b2c7?crop=entropy&fit=crop&fm=jpg&h=1150&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1700) 50% 50% #0f020f no-repeat;
     background-size: cover;
+    background-position: 50% 50%;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: 0.5;
+    opacity: 0.75;
     overflow: hidden; }
   .home-hero .support {
     display: none; }
@@ -694,16 +694,18 @@ article .entry-content {
     article .entry-content {
       max-width: 700px;
       margin: 3em auto 0; }
-      article .entry-content p {
+      article .entry-content p, article .entry-content li {
         font-size: 1.25em;
         line-height: 1.6;
         letter-spacing: -0.01rem; }
-        article .entry-content p a {
+        article .entry-content p a, article .entry-content li a {
           text-decoration: none;
           box-shadow: 0 -0.5em 0 #fef6fe inset;
           border-bottom: 1px solid #2c062d; }
-          article .entry-content p a:hover {
-            box-shadow: 0 -0.5em #d3f9d2 inset; } }
+          article .entry-content p a:hover, article .entry-content li a:hover {
+            box-shadow: 0 -0.5em #d3f9d2 inset; }
+      article .entry-content li {
+        margin-bottom: 1em; } }
 
 article .entry-footer {
   margin: 2em auto 0;
@@ -774,6 +776,7 @@ figure {
   width: 100%;
   position: relative;
   height: 0;
+  background: #0f020f;
   padding: 50% 0 0 0;
   overflow: hidden; }
 
@@ -787,3 +790,16 @@ figure img {
   top: 0;
   bottom: 0;
   margin: auto; }
+
+.site-footer {
+  margin-top: 3em;
+  background: #2c062d;
+  color: #fafafa; }
+  .site-footer a, .site-footer a:visited {
+    color: #fafafa;
+    text-decoration: none; }
+    .site-footer a:hover, .site-footer a:visited:hover {
+      text-decoration: underline; }
+  .site-footer p {
+    margin: 0;
+    padding: 1em 0; }

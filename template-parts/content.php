@@ -32,7 +32,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			Posted on <?php the_time('F j, Y'); ?> at <?php the_time('g:i A'); ?> in <strong><?php the_category(' '); ?></strong>
+			Posted on <?php the_time('F j, Y'); ?> at <?php the_time('g:i A'); ?> in <strong><?php the_category(', '); ?></strong>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>

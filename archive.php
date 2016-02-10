@@ -19,8 +19,10 @@ get_header(); ?>
 				<?php
 					the_archive_title( '<h2 class="page-title">', '</h2>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					$cat_id = get_query_var('cat');
 				?>
-				<div class="image" style="background-image: url(<?php echo cfi_featured_image_url( array( 'size' => 'full' ) ); ?>)"></div>
+
+				<div class="image" style="background-image: url(<?php echo cfi_featured_image_url( array( 'size' => 'full', 'cat_id' => $cat_id ) ); ?>)"></div>
 			</div><!-- .posts-header -->
 			<div class="container">
 				<div class="posts-list">
