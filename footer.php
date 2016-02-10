@@ -13,11 +13,14 @@
 
 	</div><!-- #content -->
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'carolynepress' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'carolynepress' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'carolynepress' ), 'carolynepress', '<a href="http://www.jamesacklin.com/" rel="designer">James Acklin</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="container">
+			<?php
+			$description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ) : ?>
+				<p class="site-description"><?php echo $description; ?></p>
+			<?php
+			endif; ?>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
