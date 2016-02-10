@@ -393,7 +393,7 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     color: #0f020f; }
     h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-      color: #2c062d; }
+      color: #73d8b8; }
 
 p, ul, li {
   line-height: 1.6; }
@@ -401,7 +401,7 @@ p, ul, li {
 a {
   color: #2c062d; }
   a:hover {
-    color: #580c59; }
+    color: #73d8b8; }
 
 a.button {
   text-decoration: none;
@@ -412,8 +412,13 @@ a.button {
   border-radius: 0.25em;
   font-style: italic;
   border: none; }
-  a.button:hover {
-    background: rgba(0, 0, 0, 0.75); }
+  a.button:hover, a.button.support {
+    text-shadow: none;
+    background: #73d8b8;
+    color: #2c062d; }
+  a.button.support:hover {
+    background: #420943;
+    color: #fafafa; }
 
 .container {
   width: 90%;
@@ -470,6 +475,14 @@ a.button {
     width: 100%;
     opacity: 0.5;
     overflow: hidden; }
+  .home-hero .support {
+    display: none; }
+    @media screen and (min-width: 48em) {
+      .home-hero .support {
+        display: inline;
+        position: absolute;
+        top: 2em;
+        right: 0; } }
 
 .section-plugs {
   background: #0f020f;
@@ -499,7 +512,7 @@ a.button {
   .section-plug a {
     color: #fafafa; }
     .section-plug a:hover {
-      color: #c7c7c7; }
+      color: #73d8b8; }
   .section-plug .content {
     width: 66%;
     position: relative;
@@ -600,7 +613,7 @@ a.button {
       height: 100%;
       width: 100%;
       background-size: cover;
-      opacity: 0.66; }
+      opacity: 0.5; }
     .posts-header.archive-header h2, .posts-header.archive-header .taxonomy-description {
       margin: 0 auto;
       text-align: center;

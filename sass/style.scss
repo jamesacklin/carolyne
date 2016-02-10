@@ -17,6 +17,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 $dark-1: darken(#420943, 11.5%);
 $normal: darken(#420943, 5%);
+$highlight: rgb(115,216,184);
+$highlight-alt: #420943;
 $white: #fafafa;
 
 @import "../bower_components/normalize-css/normalize";
@@ -45,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   a {
     text-decoration: none;
     color: $dark-1;
-    &:hover { color: $normal; }
+    &:hover { color: $highlight; }
   }
 }
 
@@ -56,7 +58,7 @@ p, ul, li {
 a {
   color: $normal;
   &:hover {
-    color: lighten($normal, 10%);
+    color: $highlight;
   }
 }
 
@@ -69,7 +71,15 @@ a.button {
   border-radius: 0.25em;
   font-style: italic;
   border: none;
-  &:hover { background: rgba(0,0,0,0.75); }
+  &:hover, &.support {
+    text-shadow: none;
+    background: $highlight;
+    color: $normal;
+  }
+  &.support:hover {
+    background: $highlight-alt;
+    color: $white;
+  }
 }
 
 .container {
@@ -131,6 +141,15 @@ a.button {
     opacity: 0.5;
     overflow: hidden;
   }
+  .support {
+    display: none;
+    @include media(48em){
+      display: inline;
+      position: absolute;
+      top: 2em;
+      right: 0;
+    }
+  }
 }
 
 
@@ -163,7 +182,7 @@ a.button {
   margin-bottom: 1em;
   a {
     color: $white;
-    &:hover { color: darken($white, 20%); }
+    &:hover { color: $highlight; }
   }
   .content {
     width: 66%;
@@ -231,7 +250,7 @@ a.button {
       top: 0; left: 0;
       height: 100%; width: 100%;
       background-size: cover;
-      opacity: 0.66;
+      opacity: 0.5;
     }
     h2, .taxonomy-description {
       margin: 0 auto;
