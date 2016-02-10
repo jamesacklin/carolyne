@@ -11,13 +11,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-image">
-		<?php
-			if (has_post_thumbnail()){
-				the_post_thumbnail();
-			} else {
-				// See functions.php for the 'category-featured-images' plugin :)
-			}
-		?>
+		<figure>
+			<?php
+				if (has_post_thumbnail()){
+					the_post_thumbnail();
+				} else {
+					// See functions.php for the 'category-featured-images' plugin :)
+				}
+			?>
+		</figure>
 	</div>
 	<?php if (is_single()) echo "<div class='container'>"; ?>
 	<header class="entry-header">

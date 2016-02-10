@@ -499,7 +499,7 @@ a.button {
   .section-plug a {
     color: #fafafa; }
     .section-plug a:hover {
-      color: #fafafa; }
+      color: #c7c7c7; }
   .section-plug .content {
     width: 66%;
     position: relative;
@@ -515,8 +515,10 @@ a.button {
     border-top: 3px solid #fafafa;
     font-weight: 700; }
   .section-plug .image {
-    background: url(url() 50% 50% #0f020f no-repeat;
+    background-position: 50% 50%;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #0f020f;
     position: absolute;
     top: 0;
     left: 0;
@@ -620,8 +622,6 @@ a.button {
       clear: both;
       content: "";
       display: table; }
-    .posts-list article .entry-image img {
-      width: 100%; }
     @media screen and (min-width: 48em) {
       .posts-list article .entry-image {
         float: left;
@@ -663,9 +663,6 @@ a.button {
       font-size: 0.8em; }
     .posts-list article .entry-footer {
       display: none; }
-
-article .entry-image img {
-  width: 100%; }
 
 @media screen and (min-width: 48em) {
   article .entry-header {
@@ -756,3 +753,23 @@ article .entry-footer {
           padding-left: 0; } }
   .main-navigation .nav-menu li.page_item_has_children ul.children {
     display: none; }
+
+figure {
+  margin: 0;
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 0;
+  padding: 50% 0 0 0;
+  overflow: hidden; }
+
+figure img {
+  position: absolute;
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }

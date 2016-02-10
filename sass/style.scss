@@ -163,7 +163,7 @@ a.button {
   margin-bottom: 1em;
   a {
     color: $white;
-    &:hover { color: $white; }
+    &:hover { color: darken($white, 20%); }
   }
   .content {
     width: 66%;
@@ -182,8 +182,10 @@ a.button {
     font-weight: 700;
   }
   .image {
-    background: url() 50% 50% $dark-1 no-repeat;
+    background-position: 50% 50%;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $dark-1;
     position: absolute;
     top: 0; left: 0;
     height: 100%; width: 100%;
@@ -254,7 +256,6 @@ a.button {
     padding-top: 1.5em;
     border-top: 1px solid #DDDDDD;
     .entry-image {
-      img { width: 100%; }
       @include media(48em){
         float: left;
         width: 50%;
@@ -307,9 +308,6 @@ a.button {
 }
 
 article {
-  .entry-image {
-    img { width: 100%; }
-  }
   .entry-header {
     @include media(48em){
       max-width: 700px;
@@ -403,4 +401,26 @@ article {
       ul.children { display: none; }
     }
   }
+}
+
+figure{
+  margin: 0;
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 0;
+  // padding: 56.25% 0 0 0;
+  padding: 50% 0 0 0;
+  overflow: hidden;
+}
+figure img{
+  position: absolute;
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
