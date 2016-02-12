@@ -74,7 +74,7 @@ a.button {
   &:hover, &.support {
     text-shadow: none;
     background: $highlight;
-    color: $normal;
+    color: $dark-1;
   }
   &.support:hover {
     background: $highlight-alt;
@@ -183,7 +183,7 @@ a.button {
   margin-bottom: 1em;
   a {
     color: $white;
-    &:hover { color: $highlight; }
+    &:hover { color: $dark-1; }
   }
   .content {
     width: 66%;
@@ -348,12 +348,13 @@ article {
         font-size: 1.25em;
         line-height: 1.6;
         letter-spacing: -0.01rem;
-        a {
+        a:not('.button') {
           text-decoration: none;
           box-shadow: 0 -0.5em 0 lighten($normal, 88%) inset;
           border-bottom: 1px solid $normal;
           &:hover { box-shadow: 0 -0.5em invert($normal) inset; }
         }
+        .button { color: $white; &:hover { color: $dark-1; } }
       }
       li { margin-bottom: 1em; }
     }

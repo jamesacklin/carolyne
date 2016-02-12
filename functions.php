@@ -85,20 +85,41 @@ function carolynepress_setup() {
     return $title;
 	});
 
-	// add_filter( 'wp_trim_excerpt', 'get_first_paragraph', 10, 2 );
 
-	/* Custom excerpts! */
-	function get_first_paragraph($id){
-		$content_post = get_post($id);
-		$content = $content_post->post_content;
-		$content = apply_filters('the_content', $content);
-		$str = str_replace(']]>', ']]&gt;', $content);
-		$str = wpautop($str);
-		$str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
-		// Strips all tags out except links, strong, and emphasis. It will remove header tags but leave the content. Beware!
-		$str = strip_tags($str, '<a><strong><em>');
-		return '<p>' . $str . '</p>';
-	}
+	if ( ! function_exists( 'wpse0001_custom_wp_trim_excerpt' ) ) :
+
+	    function wpse0001_custom_wp_trim_excerpt($wpse0001_excerpt) {
+	    global $post;
+	    $raw_excerpt = $wpse0001_excerpt;
+	        if ( '' == $wpse0001_excerpt ) {
+
+	            $wpse0001_excerpt = get_the_content('');
+	            $wpse0001_excerpt = strip_shortcodes( $wpse0001_excerpt );
+	            $wpse0001_excerpt = apply_filters('the_content', $wpse0001_excerpt);
+	            $wpse0001_excerpt = substr( $wpse0001_excerpt, 0, strpos( $wpse0001_excerpt, '</p>' ) + 4 );
+	            $wpse0001_excerpt = str_replace(']]>', ']]&gt;', $wpse0001_excerpt);
+
+	            $excerpt_end = ' <a class="button" href="'. esc_url( get_permalink() ) . '">' . '&nbsp;&raquo;&nbsp;' . sprintf(__( 'Read more', 'pietergoosen' ), get_the_title()) . '</a>';
+	            $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
+
+	            $pos = strrpos($wpse0001_excerpt, '</');
+	            //if ($pos !== false)
+	            // Inside last HTML tag
+	            //$wpse0001_excerpt = substr_replace($wpse0001_excerpt, $excerpt_end, $pos, 0);
+	            //else
+	            // After the content
+	            $wpse0001_excerpt .= $excerpt_end;
+
+	            return $wpse0001_excerpt;
+
+	        }
+	        return apply_filters('wpse0001_custom_wp_trim_excerpt', $wpse0001_excerpt, $raw_excerpt);
+	    }
+
+	endif;
+
+	remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+	add_filter('get_the_excerpt', 'wpse0001_custom_wp_trim_excerpt');
 
 }
 endif;

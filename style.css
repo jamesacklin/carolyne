@@ -415,7 +415,7 @@ a.button {
   a.button:hover, a.button.support {
     text-shadow: none;
     background: #73d8b8;
-    color: #2c062d; }
+    color: #0f020f; }
   a.button.support:hover {
     background: #420943;
     color: #fafafa; }
@@ -513,7 +513,7 @@ a.button {
   .section-plug a {
     color: #fafafa; }
     .section-plug a:hover {
-      color: #73d8b8; }
+      color: #0f020f; }
   .section-plug .content {
     width: 66%;
     position: relative;
@@ -698,12 +698,16 @@ article .entry-content {
         font-size: 1.25em;
         line-height: 1.6;
         letter-spacing: -0.01rem; }
-        article .entry-content p a, article .entry-content li a {
+        article .entry-content p a:not('.button'), article .entry-content li a:not('.button') {
           text-decoration: none;
           box-shadow: 0 -0.5em 0 #fef6fe inset;
           border-bottom: 1px solid #2c062d; }
-          article .entry-content p a:hover, article .entry-content li a:hover {
+          article .entry-content p a:not('.button'):hover, article .entry-content li a:not('.button'):hover {
             box-shadow: 0 -0.5em #d3f9d2 inset; }
+        article .entry-content p .button, article .entry-content li .button {
+          color: #fafafa; }
+          article .entry-content p .button:hover, article .entry-content li .button:hover {
+            color: #0f020f; }
       article .entry-content li {
         margin-bottom: 1em; } }
 
