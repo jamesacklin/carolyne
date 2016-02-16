@@ -471,11 +471,13 @@ figure img{
 }
 
 .container-post-nav {
+  margin-top: 3em;
+  border-top: 1px solid #DDD;
 }
 
 .nav-previous,
 .nav-next {
-  margin: 3em 0;
+  margin: 1.5em 0 3em;
   width: 50%;
   float: left;
   position: relative;

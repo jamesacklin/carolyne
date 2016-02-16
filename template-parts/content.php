@@ -57,8 +57,5 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php carolynepress_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 	<?php if (is_single()) echo "</div>"; ?>
 </article><!-- #post-## -->
