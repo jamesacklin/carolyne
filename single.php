@@ -16,13 +16,53 @@ get_header(); ?>
 		while ( have_posts() ) : the_post();
 
 			get_template_part( 'template-parts/content', get_post_format() );
+			?>
+			<div class='container container-post-nav'>
+				<?php $prev_post = get_previous_post(); if($prev_post) : ?>
+				<div class="nav-previous">
+					<div class="thumbnail">
+						<a href="<?php echo get_permalink( $prev_post->ID ); ?>"><?php echo get_the_post_thumbnail($prev_post->ID, 'thumbnail', array(150,150)); ?></a>
+					</div>
+					<?php previous_post_link( '<h2>' . __( 'Previous', 'theme' ) . '</h2>%link', _x( '%title', 'Previous post link', 'theme' ) ); ?>
+				</div>
+				<?php endif ; ?>
 
-			the_post_navigation();
+				<?php $next_post = get_next_post(); if($next_post) : ?>
+				<div class="nav-next">
+					<?php next_post_link( '<h2>' . __( 'Next', 'theme' ) . '</h2>%link', _x( '%title', 'Next post link', 'theme' ) ); ?>
+					<div class="thumbnail">
+						<a href="<?php echo get_permalink( $next_post->ID ); ?>"><?php echo get_the_post_thumbnail($next_post->ID, 'thumbnail', array(150,150)); ?></a>
+					</div>
+				</div>
+				<?php endif ; ?>
+			</div>
 
+			<script>
+			$ = jQuery;
+			$('.nav-previous').hover(function(){
+				$(this).css('width','100%');
+				$('.nav-next').css({'width':'0px', 'opacity':'0', 'white-space':'nowrap'});
+			}, function(){
+				$('.nav-next').css({'width':'50%', 'opacity':'1', 'white-space':'normal'});
+				$(this).css('width', '50%');
+			});
+
+			$('.nav-next').hover(function(){
+				$('.nav-previous').css({'width':'0px', 'opacity':'0', 'white-space':'nowrap'});
+				$(this).css('width','100%');
+			}, function(){
+				$('.nav-previous').css({'width':'50%', 'opacity':'1', 'white-space':'normal'});
+				$(this).css('width', '50%');
+			});
+
+			</script>
+
+			<?php echo "<div class='container container-comments'>";
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
 			endif;
+			echo "</div>";
 
 		endwhile; // End of the loop.
 		?>

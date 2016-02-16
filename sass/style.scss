@@ -200,6 +200,7 @@ a.button {
     background: $normal;
     border-top: 3px solid $white;
     font-weight: 700;
+    a:hover { color: $highlight; }
   }
   .image {
     background-position: 50% 50%;
@@ -458,4 +459,62 @@ figure img{
     &:hover { text-decoration: underline }
   }
   p { margin: 0; padding: 1em 0; }
+}
+
+.container-post-nav,
+.container-comments {
+  max-width: 700px;
+}
+
+.container-comments {
+  @extend clearfix;
+}
+
+.container-post-nav {
+}
+
+.nav-previous,
+.nav-next {
+  margin: 3em 0;
+  width: 50%;
+  float: left;
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  h2 {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: $highlight;
+    margin: 2em 0 0.25em;
+  }
+  a {
+    font-family: "ratio-display", sans-serif;
+    font-size: 2em;
+    text-decoration: none;
+    line-height: 0.8;
+  }
+  .thumbnail {
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.nav-previous {
+  .thumbnail { left: -150px; }
+  &:hover {
+    width: 100%;
+    padding-left: 175px;
+    .thumbnail { left: 0px; }
+  }
+}
+.nav-next {
+  text-align: right;
+  .thumbnail { right: -150px; }
+  &:hover {
+    width: 100%;
+    padding-right: 175px;
+    .thumbnail { right: 0px; }
+  }
 }

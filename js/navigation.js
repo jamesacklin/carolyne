@@ -79,3 +79,21 @@
 		}
 	}
 } )();
+
+// Post navigation
+$ = jQuery;
+$('.nav-previous').hover(function(){
+	$(this).css('width','100%');
+	$('.nav-next').css({'width':'0px', 'opacity':'0', 'white-space':'nowrap'});
+}, function(){
+	$('.nav-next').css({'width':'50%', 'opacity':'1', 'white-space':'normal'});
+	$(this).css('width', '50%');
+});
+
+$('.nav-next').hover(function(){
+	$('.nav-previous').css({'width':'0px', 'opacity':'0', 'white-space':'nowrap'});
+	$(this).css('width','100%');
+}, function(){
+	$('.nav-previous').css({'width':'50%', 'opacity':'1', 'white-space':'normal'});
+	$(this).css('width', '50%');
+});

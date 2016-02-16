@@ -528,6 +528,8 @@ a.button {
     background: #2c062d;
     border-top: 3px solid #fafafa;
     font-weight: 700; }
+    .section-plug h2 a:hover {
+      color: #73d8b8; }
   .section-plug .image {
     background-position: 50% 50%;
     background-size: cover;
@@ -807,3 +809,53 @@ figure img {
   .site-footer p {
     margin: 0;
     padding: 1em 0; }
+
+.container-post-nav,
+.container-comments {
+  max-width: 700px; }
+
+.nav-previous,
+.nav-next {
+  margin: 3em 0;
+  width: 50%;
+  float: left;
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  transition: all 0.2s ease; }
+  .nav-previous h2,
+  .nav-next h2 {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: #73d8b8;
+    margin: 2em 0 0.25em; }
+  .nav-previous a,
+  .nav-next a {
+    font-family: "ratio-display", sans-serif;
+    font-size: 2em;
+    text-decoration: none;
+    line-height: 0.8; }
+  .nav-previous .thumbnail,
+  .nav-next .thumbnail {
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 0; }
+
+.nav-previous .thumbnail {
+  left: -150px; }
+
+.nav-previous:hover {
+  width: 100%;
+  padding-left: 175px; }
+  .nav-previous:hover .thumbnail {
+    left: 0px; }
+
+.nav-next {
+  text-align: right; }
+  .nav-next .thumbnail {
+    right: -150px; }
+  .nav-next:hover {
+    width: 100%;
+    padding-right: 175px; }
+    .nav-next:hover .thumbnail {
+      right: 0px; }
