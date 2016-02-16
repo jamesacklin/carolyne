@@ -475,8 +475,8 @@ figure img{
   border-top: 1px solid #DDD;
 }
 
-.nav-previous,
-.nav-next {
+.post-nav-previous,
+.post-nav-next {
   margin: 1.5em 0 3em;
   width: 50%;
   float: left;
@@ -503,7 +503,7 @@ figure img{
   }
 }
 
-.nav-previous {
+.post-nav-previous {
   .thumbnail { left: -150px; }
   &:hover {
     width: 100%;
@@ -511,7 +511,7 @@ figure img{
     .thumbnail { left: 0px; }
   }
 }
-.nav-next {
+.post-nav-next {
   text-align: right;
   .thumbnail { right: -150px; }
   &:hover {

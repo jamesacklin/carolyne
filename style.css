@@ -818,8 +818,8 @@ figure img {
   margin-top: 3em;
   border-top: 1px solid #DDD; }
 
-.nav-previous,
-.nav-next {
+.post-nav-previous,
+.post-nav-next {
   margin: 1.5em 0 3em;
   width: 50%;
   float: left;
@@ -827,39 +827,39 @@ figure img {
   height: 150px;
   overflow: hidden;
   transition: all 0.2s ease; }
-  .nav-previous h2,
-  .nav-next h2 {
+  .post-nav-previous h2,
+  .post-nav-next h2 {
     font-size: 0.9em;
     text-transform: uppercase;
     color: #73d8b8;
     margin: 2em 0 0.25em; }
-  .nav-previous a,
-  .nav-next a {
+  .post-nav-previous a,
+  .post-nav-next a {
     font-family: "ratio-display", sans-serif;
     font-size: 2em;
     text-decoration: none;
     line-height: 0.8; }
-  .nav-previous .thumbnail,
-  .nav-next .thumbnail {
+  .post-nav-previous .thumbnail,
+  .post-nav-next .thumbnail {
     transition: all 0.2s ease;
     position: absolute;
     top: 0; }
 
-.nav-previous .thumbnail {
+.post-nav-previous .thumbnail {
   left: -150px; }
 
-.nav-previous:hover {
+.post-nav-previous:hover {
   width: 100%;
   padding-left: 175px; }
-  .nav-previous:hover .thumbnail {
+  .post-nav-previous:hover .thumbnail {
     left: 0px; }
 
-.nav-next {
+.post-nav-next {
   text-align: right; }
-  .nav-next .thumbnail {
+  .post-nav-next .thumbnail {
     right: -150px; }
-  .nav-next:hover {
+  .post-nav-next:hover {
     width: 100%;
     padding-right: 175px; }
-    .nav-next:hover .thumbnail {
+    .post-nav-next:hover .thumbnail {
       right: 0px; }

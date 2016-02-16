@@ -19,7 +19,7 @@ get_header(); ?>
 			?>
 			<div class='container container-post-nav'>
 				<?php $prev_post = get_previous_post(); if($prev_post) : ?>
-				<div class="nav-previous">
+				<div class="post-nav-previous">
 					<div class="thumbnail">
 						<a href="<?php echo get_permalink( $prev_post->ID ); ?>"><?php echo get_the_post_thumbnail($prev_post->ID, 'thumbnail', array(150,150)); ?></a>
 					</div>
@@ -28,7 +28,7 @@ get_header(); ?>
 				<?php endif ; ?>
 
 				<?php $next_post = get_next_post(); if($next_post) : ?>
-				<div class="nav-next">
+				<div class="post-nav-next">
 					<?php next_post_link( '<h2>' . __( 'Next', 'theme' ) . '</h2>%link', _x( '%title', 'Next post link', 'theme' ) ); ?>
 					<div class="thumbnail">
 						<a href="<?php echo get_permalink( $next_post->ID ); ?>"><?php echo get_the_post_thumbnail($next_post->ID, 'thumbnail', array(150,150)); ?></a>
