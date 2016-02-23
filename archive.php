@@ -39,7 +39,12 @@ get_header(); ?>
 
 					endwhile;
 
-					the_posts_navigation();
+					the_posts_pagination( array(
+						'screen_reader_text' => ' ',
+						'prev_text'          => __( 'Previous', 'twentyfifteen' ),
+						'next_text'          => __( 'Next', 'twentyfifteen' ),
+						'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( '', 'nieuwedruk' ) . ' </span>',
+					));
 
 				else :
 
