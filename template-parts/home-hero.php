@@ -21,7 +21,7 @@
 			<?php
 			endif; ?>
       <p>
-        <a href="#" class="button">&mdash;Let's Work Together</a>
+        <a href="mailto:whelan.writes@gmail.com" class="button">&mdash;Let's Work Together</a>
       </p>
       <?php if (get_field('support_url', 'option')): ?>
         <a href="<?php echo get_field('support_url', 'option') ?>" class="button support">Support</a>
