@@ -8,6 +8,27 @@
  * @package Carolyne_Whelan
  */
 ?>
+
+<?php
+  $image_array = get_field('homepage_image', 'option');
+  // print_r($image_array);
+?>
+<style>
+  .homepage-hero-image {
+    background-image: url(<?php echo $image_array['sizes']['medium_large'] ?>);
+  }
+  @media (min-width: 48em){
+    .homepage-hero-image {
+      background-image: url(<?php echo $image_array['sizes']['large'] ?>);
+    }
+  }
+  @media (min-width: 64em){
+    .homepage-hero-image {
+      background-image: url(<?php echo $image_array['url'] ?>);
+    }
+  }
+</style>
+
 <div class="home-hero">
   <div class="container">
     <div class="headline">
@@ -29,7 +50,7 @@
     </div>
   </div>
   <?php if (get_field('homepage_image', 'option')): ?>
-    <div class="image" style="background-image: url(<?php echo get_field('homepage_image', 'option') ?>);"></div>
+    <div class="image homepage-hero-image"></div>
   <?php else: ?>
     <div class="image"></div>
   <?php endif; ?>
